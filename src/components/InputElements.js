@@ -14,7 +14,7 @@ const InputElements = () => {
             }) 
  
 
-            console.log(response)
+            window.location = "/";
         } catch (err) {
             console.error(err.message)
         }

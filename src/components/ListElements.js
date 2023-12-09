@@ -41,7 +41,7 @@ const ListElements = () => {
             <div>
                 <h3 key={elements.elements_id}>{elements.description}</h3>
 
-                <EditElements />
+                <EditElements elements={elements}/>
                 <button 
                     onClick={() => deleteElements(elements.elements_id)}>Delete</button>
             </div>

@@ -1,7 +1,8 @@
+import HomePageIcons from "../components/HomePageIcons";
 
 const Home = () => {
 
-    return <h1>Home</h1>
+    return <HomePageIcons />
 }
 
 export default Home;

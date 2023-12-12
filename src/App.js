@@ -12,18 +12,19 @@ import Ptable from './pages/Ptable'
 // components
 import Navbar from "./components/Navbar"
 import Footer from "./components/Footer"
+import HomePageIcons from "./components/HomePageIcons"
 
 function App() {
   return (
-    
    <>
     <Navbar />
     <div className="container">
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Home Home={HomePageIcons} />} />
           <Route path="/topics" element={<Topics />} />
           <Route path="/tips" element={<Tips />} />
           <Route path="/ptable" element={<Ptable />} /> 
+          <Route path="/" element={<HomePageIcons  />} />
         </Routes> 
     </div>
     <div>

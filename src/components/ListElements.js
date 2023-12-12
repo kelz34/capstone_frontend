@@ -1,4 +1,4 @@
-import React, { Fragment, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import EditElements from "./EditElements";
 
@@ -36,7 +36,7 @@ const ListElements = () => {
     }, [])
 
     console.log(elements)
-    return <Fragment>
+    return <>
         <h1>{elements.map(elements => (
             <div>
                 <h3 key={elements.elements_id}>{elements.description}</h3>
@@ -46,7 +46,7 @@ const ListElements = () => {
                     onClick={() => deleteElements(elements.elements_id)}>Delete</button>
             </div>
         ))}</h1>
-    </Fragment>
+    </>
 }
 
 export default ListElements;

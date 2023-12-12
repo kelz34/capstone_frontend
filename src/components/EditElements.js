@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from "react"
+import React, { useState } from "react"
 
 const EditElements = ({ elements }) => {
     const [description, setDescription] = useState(elements.description)
@@ -15,14 +15,14 @@ const EditElements = ({ elements }) => {
                 body: JSON.stringify(body)
             })
 
-            window.location = "/"
+            window.location = "/tips"
         } catch (err) {
             console.error(err.message)
         }
     }
 
     return (
-        <Fragment>
+        <>
             <div>
             <h3>Edit</h3>
             <input type="text" className="form-control" value={description} onChange={e => setDescription(e.target.value)}/>
@@ -33,7 +33,7 @@ const EditElements = ({ elements }) => {
                 onClick={e => updateDescrition(e)}>Edit</button>
             </div>
             
-        </Fragment>
+        </>
 )}
 
 export default EditElements; 

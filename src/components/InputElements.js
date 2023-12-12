@@ -1,4 +1,4 @@
-import React, { Fragment, useState }  from "react";
+import React, { useState }  from "react";
 
 const InputElements = () => {
     const [description, setDescription] = useState("")
@@ -14,14 +14,14 @@ const InputElements = () => {
             }) 
  
 
-            window.location = "/";
+            window.location = "/tips";
         } catch (err) {
             console.error(err.message)
         }
     }
 
     return (
-        <Fragment>
+        <>
             <h1 className="text-center">Input Elements</h1>
             <form className="d-flex mt-5" onSubmit={onSubmitForm}>
                 <input 
@@ -32,7 +32,7 @@ const InputElements = () => {
                 />
                 <button className="btn btn-success">Add</button>
             </form>
-        </Fragment>
+        </>
     );
 };
 

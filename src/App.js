@@ -1,12 +1,12 @@
-import React from "react";
-import './App.css';
+import React, { useState } from "react";
 import { Route, Routes } from "react-router-dom"
 
 // Pages
 import Home from './pages/Home'
 import Topics from './pages/Topics'
-import Tips from './pages/Tips'
 import Ptable from './pages/Ptable'
+import Cards from './pages/Cards'
+import Lessons from "./pages/Lessons";
 
 
 // components
@@ -15,16 +15,17 @@ import Footer from "./components/Footer"
 import HomePageIcons from "./components/HomePageIcons"
 
 function App() {
-  return (
-   <>
+  return ( 
+   <> 
+
     <Navbar />
-    <div className="container">
+    <div >
         <Routes>
           <Route path="/" element={<Home Home={HomePageIcons} />} />
           <Route path="/topics" element={<Topics />} />
-          <Route path="/tips" element={<Tips />} />
           <Route path="/ptable" element={<Ptable />} /> 
-          <Route path="/" element={<HomePageIcons  />} />
+          <Route path="/cards" element={<Cards />} />
+          <Route path="/lessons" element={<Lessons />} />
         </Routes> 
     </div>
     <div>
@@ -33,5 +34,7 @@ function App() {
    </>
   );
 }
+
+
 
 export default App;

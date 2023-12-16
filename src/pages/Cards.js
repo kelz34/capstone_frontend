@@ -1,7 +1,11 @@
+import Flashcards from "../components/Flashcards"
 
 const Cards = () => {
 
-    return <h1>Cards</h1>
-}
+    return (
+    <>
+        <Flashcards />
+    </>
+)}
 
 export default Cards;

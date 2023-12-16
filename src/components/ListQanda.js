@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import EditElements from "./EditQanda";
+import EditQanda from "./EditQanda";
 
 const ListQanda = () => {
     const [qanda, setQanda] = useState([])
@@ -13,7 +13,7 @@ const ListQanda = () => {
             })
 
             setQanda(qanda.filter(qanda => qanda.qanda_id !== id))
-            // console.log(deleteElements)
+            // console.log(deleteQanda)
         } catch (err) {
             console.error(err.message)
         }
@@ -34,13 +34,13 @@ const ListQanda = () => {
         getQanda();
     }, [])
 
-    // console.log(elements)
+    // console.log(qanda)
     return <>
         <h1>{qanda.map(qanda => (
             <div>
                 <h3 key={qanda.qanda_id}>{qanda.term}</h3>
 
-                <EditElements qanda={qanda}/>
+                <EditQanda qanda={qanda}/>
                 <button 
                     class="text-white bg-red-500 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                     onClick={() => deleteQanda(qanda.qanda_id)}><span class="text-1xl font-extrabold dark:text-white">Delete</span></button>

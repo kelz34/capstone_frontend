@@ -1,14 +1,6 @@
 import { Link } from "react-router-dom"
 
 const Lessons = ({ map }) => {
-   const lessons = [
-    'https://www.youtube.com/watch?v=ZuWa827qAao&list=PLybg94GvOJ9EbbO2RXPWTUNIIE0C7hSfm&index=1', 
-    'hahttps://www.youtube.com/watch?v=dggHWvFJ8Xs&list=PLybg94GvOJ9EbbO2RXPWTUNIIE0C7hSfm&index=2',
-    'https://www.youtube.com/watch?v=Gn97hpEkTiM&list=PLybg94GvOJ9EbbO2RXPWTUNIIE0C7hSfm&index=3',
-    'https://www.youtube.com/watch?v=AGxOWIuaBP8&list=PLybg94GvOJ9EbbO2RXPWTUNIIE0C7hSfm&index=4',
-    'https://www.youtube.com/watch?v=9B3DDY27ZtE&list=PLybg94GvOJ9EbbO2RXPWTUNIIE0C7hSfm&index=5'
-   ]
-      
    return (
     <>
 
